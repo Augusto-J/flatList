@@ -60,29 +60,5 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    lista: { padding: 13 },
-    item: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 10,
-        backgroundColor: '#1A2332',
-        borderRadius: 8,
-        paddingVertical: 14,
-        paddingHorizontal: 16,
-        borderLeftWidth: 4,
-    },
-    avatar: {
-        width: 38, height: 38,
-        borderRadius: 19,
-        backgroundColor: '#14B8A6',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    num: { color: '#fff', fontWeight: 'bold' },
-    titulo: {
-        fontSize: 14, fontWeight: 'bold',
-        color: '#E2E8F0'
-    },
-    sub: { fontSize: 12, color: '#64748B' },
-    separador: { height: 5 },
+       
 });
