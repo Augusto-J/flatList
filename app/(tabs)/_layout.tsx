@@ -8,7 +8,7 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: true,
         headerStyle: {
-          backgroundColor: "#6e0505ff",
+          backgroundColor: "rgb(25, 21, 21)",
           elevation: 0,
           shadowOpacity: 0,
           borderBottomWidth: 1,
@@ -19,10 +19,10 @@ export default function TabLayout() {
           fontSize: 18,
           color: "#ffffffff",
         },
-        tabBarActiveTintColor: "#007AFF",
+        tabBarActiveTintColor: "#f8f8f8",
         tabBarInactiveTintColor: "#8E8E93",
         tabBarStyle: {
-          backgroundColor: "#eff157ff",
+          backgroundColor: "rgb(22, 19, 13)",
           borderTopWidth: 1,
           borderTopColor: "#F0F0F0",
           height: Platform.OS === "ios" ? 88 : 64,
@@ -115,12 +115,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="input"
+        name="filme"
         options={{
-          title: "Input",
+          title: "Filme",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "add-circle" : "add-circle"}
+              name={focused ? "eye" : "eye-outline"}
               size={24}
               color={color}
             />
