@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import {View, StyleSheet, FlatList, Text, Image, TouchableOpacity} from 'react-native';
 
 const categorias = [
@@ -77,6 +78,7 @@ function renderCategoria({ item } : {item:any}) {
       // showsHorizontalScrollIndicator = {false}
       // contentContainerStyle={{ paddingBottom: 40 }}
       renderItem={({ item }) => (
+        <Link href='/filme'>
        <TouchableOpacity style={styles.bott}>     
           <View>
             <Image  
@@ -86,6 +88,7 @@ function renderCategoria({ item } : {item:any}) {
               <Text style={styles.filmeTitulo}>{item.titulo}</Text>
            </View>
            </TouchableOpacity>
+        </Link>
       )}
       />
     
@@ -118,7 +121,7 @@ const styles = StyleSheet.create({
     color:'#ffff',
     fontSize: 24,
     fontFamily:'Arial',
-    height: 315,
+    height: 335,
     padding: 15,
     margin: 10,
     marginBottom: 20,

@@ -1,10 +1,13 @@
+import { Link } from 'expo-router';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
 
 export default function App() {
     return (
 
-        <View style={styles.boxfilm}>
+    <View style={styles.boxfilm}>
+
+         <View style={styles.bigwach}>
 
             <View style={styles.boximgFilm}>
                 <Image
@@ -13,26 +16,29 @@ export default function App() {
                 >
                 </Image>
             </View>
-            </View>
+        
 
-        <View >
             <View style={styles.watchFilm}>
                 <Text style={styles.titolofilm}>Oppenheimer</Text>
-                <Text style={styles.textfilm}>Duração de <Text style={styles.duration}>3h</Text></Text>
+                <Text style={styles.textfilm}>2023 Duração de <Text style={styles.duration}>3h</Text><Text style={styles.age}>16</Text></Text>
 
- <TouchableOpacity style={styles.startFilm}> Assistir </TouchableOpacity>
+            <Link href={'/(tabs)/flat'}>
+                <TouchableOpacity style={styles.startFilm}> Assistir </TouchableOpacity>
+            </Link>
+                <Text style={styles.descFilm}> <Text style={styles.sino}>Sinopse</Text>
+                    O longa-metragem de 2023, dirigido por Christopher Nolan,
+                    é uma adaptação da biografia "American Prometheus", 
+                    escrita por Kai Bird e Martin J. Sherwin. 
+                    O filme foca na vida de J. Robert Oppenheimer,
+                    um físico teórico americano que é amplamente reconhecido como o
+                    "pai da bomba atômica".   
+                </Text>
 
-          <Text style={styles.descFilm}>
-            O longa-metragem de 2023, dirigido por Christopher Nolan,
-            é uma adaptação da biografia "American Prometheus", 
-            escrita por Kai Bird e Martin J. Sherwin. 
-            O filme foca na vida de J. Robert Oppenheimer,
-            um físico teórico americano que é amplamente reconhecido como o
-            "pai da bomba atômica".
-                    
-                    </Text>
              </View>
+
         </View>
+
+    </View>
     )
 }
 
@@ -40,29 +46,31 @@ const styles = StyleSheet.create({
 
     boxfilm: {
         backgroundColor: '#2f3e3a',
-        width: '100%',
-        height: '100%',
-        marginLeft: 'auto',
         flex: 1,
-        //colocar imagem de fundo
+        flexDirection: 'row'
     },
 
-    watchFilm: {
-        position: 'absolute',
-        marginTop: 80,
-        marginLeft: 20,
+    bigwach:{
+        flex: 2,
+        justifyContent: 'space-around'
+    },
+
+    wachfilm:{
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
 
     boximgFilm: {
-        width: '53%',
-        height: '80%',
-        marginLeft: '42%',
+        width: '50%',
+        height: 700,
+        marginTop: 25,
+        marginLeft: '45%',
     },
 
     imgFilm: {
         width: '100%',
         height: '100%',
-        borderBottomLeftRadius: 20,
+        borderRadius: 20,
     },
 
     textfilm: {
@@ -71,6 +79,15 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 30,
         alignSelf: 'center',
+    },
+
+    age:{
+
+
+    },
+
+    sino:{
+
 
     },
 
@@ -86,6 +103,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 30,
+        width: 200,
     },
 
     descFilm: {

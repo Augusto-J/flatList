@@ -115,12 +115,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="filme"
+        name="flat"
         options={{
-          title: "Filme",
+          title: "FlatList",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "eye" : "eye-outline"}
+              name={focused ? "list" : "list"}
               size={24}
               color={color}
             />
@@ -128,12 +128,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="flat"
+        name="filme"
         options={{
-          title: "FlatList",
+          title: "Filme",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "list" : "list-outline"}
+              name={focused ? "eye" : "eye"}
               size={24}
               color={color}
             />
