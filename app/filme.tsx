@@ -20,7 +20,7 @@ export default function App() {
 
             <View style={styles.watchfilm}>
                 <Text style={styles.titolofilm}>Oppenheimer</Text>
-                <Text style={styles.textfilm}>Lançamento: 2023    Duração de <Text style={styles.duration}>3h     </Text><Text style={styles.age}> 16 </Text></Text>
+                <Text style={styles.textfilm}>Lançamento: 2023    Duração de <Text style={styles.duration}>3h   </Text><Text style={styles.age}> 16 </Text></Text>
 
         <View style={styles.bots}>
             <Link href={'/flat'}>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     imgFilm: {
         marginTop: '5%',
         width: '100%',
-        height: '100%',
+        height: '90%',
         borderRadius: 20,
     },
 
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 3,
         borderColor: '#aab41ec5',
-        marginLeft: 60,
+        marginLeft: 50,
         fontSize: 18
     },
 
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         borderWidth: 3,
         borderColor: '#ac961c',
-        marginLeft:'30%',
+        marginLeft:'20%',
         fontSize: 18,
         marginTop: 30,
     },
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     textfav:{
         fontSize: 22,
         color: 'white',
-        marginLeft: '50%',
+        marginLeft: '40%',
         marginTop: '-14%',
     }
     
