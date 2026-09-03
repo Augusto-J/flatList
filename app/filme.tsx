@@ -1,5 +1,5 @@
 import { Link } from 'expo-router';
-import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, ActivityIndicator } from 'react-native';
 
 
 export default function App() {
@@ -26,10 +26,14 @@ export default function App() {
             <Link href={'/flat'}>
                 <TouchableOpacity style={styles.startFilm}> Assistir </TouchableOpacity>
 
-                <TouchableOpacity style={styles.backsee}> +Lista de filmes </TouchableOpacity>
+                <TouchableOpacity style={styles.backsee}> + Lista de filmes </TouchableOpacity>
             </Link>
+            <View style={styles.Fav}>
+                     <TouchableOpacity style={styles.backsee2}> </TouchableOpacity>
+                     <Text style={styles.textfav}>Favoritar</Text>
+            </View>
         </View>
-
+        
                 <Text style={styles.descFilm}> <Text style={styles.sino}>Sinopse: </Text>
                       O longa-metragem de 2023, dirigido por Christopher Nolan,
                     é uma adaptação da biografia "American Prometheus", 
@@ -52,6 +56,8 @@ const styles = StyleSheet.create({
     boxfilm: {
         backgroundColor: '#2f3e3a',
         flex: 1,
+        width: '100%',
+        margin: 'auto',
     },
 
     bigwach:{
@@ -61,12 +67,12 @@ const styles = StyleSheet.create({
     },
 
     watchfilm:{
-        width: 500,
+        width: '50%',
     },
 
     sino:{
-        fontSize: 20,
-        color: '#ffff', 
+        fontSize: 25,
+        color: '#ffa332fa', 
     },
 
     boximgFilm: {
@@ -76,8 +82,9 @@ const styles = StyleSheet.create({
     },
 
     imgFilm: {
-        width: 700,
-        height: 900,
+        marginTop: '5%',
+        width: '100%',
+        height: '100%',
         borderRadius: 20,
     },
 
@@ -85,7 +92,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
-        marginTop: 30,
+        marginTop: '20%',
         alignSelf: 'center',
     },
 
@@ -104,7 +111,7 @@ const styles = StyleSheet.create({
     titolofilm: {
         color: 'white',
         textDecorationLine: 'underline',
-        textDecorationColor: 'red',
+        textDecorationColor: '#ff2020a1',
         marginLeft: 50,
         fontSize: 50,
         fontWeight: 'bold',
@@ -115,8 +122,8 @@ const styles = StyleSheet.create({
     descFilm: {
         color: 'white',
         textAlign: 'justify',
-        fontSize: 15,
-        margin: 17,
+        fontSize: 19,
+        margin: 14,
     },
 
     bots:{
@@ -124,37 +131,67 @@ const styles = StyleSheet.create({
     },
 
     startFilm: {
-        color: 'black',
         fontFamily: 'Arial',
         fontWeight: 'bold',
         width: 150,
         height: 40,
-        backgroundColor: '#dbdbe2',
+        color: 'white',
         textAlign: 'center',
         paddingTop: 9,
         marginTop: 40,
         borderRadius: 10,
         borderWidth: 3,
-        borderColor: '#5f0000',
+        borderColor: '#aab41ec5',
         marginLeft: 60,
         fontSize: 18
     },
 
     backsee:{
-        color: 'black',
+        color: 'white',
         fontFamily: 'Arial',
         fontWeight: 'bold',
-        width: 150,
-        height: 40,
-        backgroundColor: '#dbdbe2',
+        width: 170,
+        height: 42,
         textAlign: 'center',
         paddingTop: 9,
         borderRadius: 10,
         borderWidth: 3,
-        borderColor: '#5f0000',
-        marginLeft: 50,
+        borderColor: '#1e71b4',
+        marginLeft: 26,
         fontSize: 18,
 
     },
 
+    Fav:{
+        width:'50%',
+        height:'50%',
+        margin: 'auto',
+        justifyContent: 'center',
+        display:'flex',
+        marginBottom: '5%'
+    },
+    
+    backsee2:{
+        color: 'black',
+        fontFamily: 'Arial',
+        fontWeight: 'bold',
+        width: 30,
+        height: 30,
+        textAlign: 'center',
+        paddingTop: 9,
+        borderRadius: 100,
+        borderWidth: 3,
+        borderColor: '#ac961c',
+        marginLeft:'30%',
+        fontSize: 18,
+        marginTop: 30,
+    },
+
+    textfav:{
+        fontSize: 22,
+        color: 'white',
+        marginLeft: '50%',
+        marginTop: '-14%',
+    }
+    
 });

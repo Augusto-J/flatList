@@ -1,23 +1,32 @@
+import{View, Image, FlatList, StyleSheet, Text, TouchableOpacity} from 'react-native'
 import { Link } from 'expo-router';
-import {View, StyleSheet, FlatList, Text, Image, TouchableOpacity} from 'react-native';
-import CategoriasFilme from '../components/CategoriasFilme';
-import renderCategoria from '../components/RendeICat';
 
 
-const categorias=CategoriasFilme();
-console.log(categorias);
-
-export default function App() {
-    return (
-      <View style={styles.backcolor}>
-        <FlatList
-          data={categorias}
-          keyExtractor={i => i.id}
-          renderItem={renderCategoria }
-        />
-      </View>
-
-    );
+export default function renderCategoria({ item } : {item:any}) {
+  return (
+    <View style={styles.categoria}>
+      {item.titulo}
+      <FlatList
+      data={item.filmes}
+      keyExtractor={filme => filme.id}
+      horizontal={true}
+      renderItem={({ item }) => (
+        <Link href='/filme'>
+       <TouchableOpacity style={styles.bott}>     
+          <View>
+            <Image  
+            source = {{uri: item.Imagem}}
+            style={styles.filmage}
+            />
+              <Text style={styles.filmeTitulo}>{item.titulo}</Text>
+           </View>
+           </TouchableOpacity>
+        </Link>
+      )}
+      />
+    
+    </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -69,3 +78,4 @@ const styles = StyleSheet.create({
   }
        
 });
+
